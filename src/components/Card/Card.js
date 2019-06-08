@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import LinesEllipsis from 'react-lines-ellipsis';
+import {device} from "../../styles/modules/variables";
 
 const Card = props => {
   return (
@@ -37,8 +38,12 @@ const MovieCard = styled.div`
   border: 2px solid #eee;
   color: #333;
   margin: 0 1em 50px;
-  width: calc(50% - 6em);
+  width: 100%;
+  @media (${device.tablet}) {
+    width: calc(50% - 6em);
+  }
 `
+
 const MoviePoster = styled.div`
   width:20%;
   box-sizing:border-box;
